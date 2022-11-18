@@ -21,3 +21,5 @@ jobs:
       - name: Deploy
         working-directory: back-end/
         run: railway up --detach --service sgcm-jonatan
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
