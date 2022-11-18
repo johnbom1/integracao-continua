@@ -5,14 +5,14 @@ on:
 jobs:
   ci:
     name: CI Workflow Main
-    uses: ./.github/workflows/cd-backend-main-yml
+    uses: ./.github/workflows/ci-backend-main-yml
     
   deploy:
     needs: ci
     runs-on: ubuntu-latest
     name: Deploy Railway
     steps:
-      - uses: actions/chechkout@v3
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with: 
           node-version: 16
