@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: 16
       - name: instalando dependencias
-        run: npm install -g @angular/cli@latest
+        run: npm install
       - name: Test
         working-directory: front-end/
         run: npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
