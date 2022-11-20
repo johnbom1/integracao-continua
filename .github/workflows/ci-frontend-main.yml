@@ -16,12 +16,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Node 16
+      - name: Set up NODE 16
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          distribution: 'zulu'
-          
+      - name: instalando dependencias
+        working-directory: front-end/
+        run: npm install
       - name: Test
         working-directory: front-end/
         run: npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
@@ -30,11 +31,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Node 16
+      - name: Set up NODE 16
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          distribution: 'zulu'
+      - name: instalando dependencias
+        working-directory: front-end/
+        run: npm install
       - name: Package
         working-directory: front-end/
         run: npm run build --prod
