@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: 16
       - name: Test
-        working-directory: back-end/
+        working-directory: front-end/
         run: npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
   package:
     needs: test
