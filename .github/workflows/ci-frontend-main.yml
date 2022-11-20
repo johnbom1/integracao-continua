@@ -20,6 +20,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
+      - name: Instalação do cliente Railway
+        run: npm install -g @railway/cli
       - name: Test
         working-directory: front-end/
         run: npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
@@ -32,6 +34,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
+      - name: Instalação do cliente Railway
+        run: npm install -g @railway/cli
       - name: Package
         working-directory: front-end/
         run: npm run build --prod
