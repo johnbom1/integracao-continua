@@ -35,6 +35,9 @@ jobs:
         with:
           node-version: 16
           distribution: 'zulu'
+      - run: npm ci
+      - run: npm test
       - name: Package
         working-directory: front-end/
         run: npm run build --prod
+      
