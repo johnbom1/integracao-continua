@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 jobs:
   ci:
-    name: CI Workflow Main
+    name: CD Workflow Main
     uses: ./.github/workflows/ci-frontend-main.yml
     
   deploy:
@@ -18,6 +18,7 @@ jobs:
       - uses: actions/setup-node@v3
         with: 
           node-version: 16
+          distribution: 'zulu'
       - name: Instalação do cliente Railway
         run: npm install -g @railway/cli
       - name: Deploy
