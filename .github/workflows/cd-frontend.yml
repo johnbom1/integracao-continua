@@ -23,7 +23,7 @@ jobs:
       - name: Instalação do cliente Angular CLI
         run: npm install -g @angular/cli
       - name: Deploy
-        working-directory: front-end/dist/sgcmapp
+        working-directory: front-end/
         run: railway up --detach --service sgcm-jonatan2
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
