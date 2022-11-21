@@ -9,7 +9,8 @@ on:
   pull_request:
     paths:
       - 'front-end/**'   
-  workflow_dispatch:
+  workflow_call:
+    
   
 jobs:
   test:
@@ -41,10 +42,3 @@ jobs:
       - name: Package
         working-directory: front-end/
         run: npm run build --prod
-      - name: Instalação do cliente Railway
-        run: npm install -g @railway/cli   
-      - name: Deploy
-        working-directory: front-end/dist/sgcmapp
-        run: railway up --detach --service sgcm-jonatan2
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
