@@ -39,5 +39,5 @@ jobs:
         working-directory: front-end/
         run: npm install
       - name: Package
-        working-directory: front-end/
+        working-directory: front-end/dist/sgcmapp
         run: npm run build --prod
