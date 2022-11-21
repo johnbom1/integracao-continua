@@ -21,20 +21,7 @@ jobs:
       - name: Instalação do cliente Railway
         run: npm install -g @railway/cli
       - name: Instalação do cliente Angular CLI
-        run: npm install -g @angular/cli
-      - name: Cache node modules
-        id: cache-nodemodules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: front-end/node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-  
-            
+        run: npm install -g @angular/cli            
       - name: Deploy
         working-directory: front-end/
         run: railway up --detach --service sgcm-jonatan2
