@@ -22,8 +22,6 @@ jobs:
         run: npm install -g @railway/cli
       - name: Instalação do cliente Angular CLI
         run: npm install -g @angular/cli  
-      - name: instalando only dev
-        run: npm install --only=dev
       - name: Deploy
         working-directory: front-end/
         run: railway up --detach --service sgcm-jonatan2
