@@ -20,7 +20,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          distribution: 'zulu'
       - name: instalando dependencias
         working-directory: front-end/
         run: npm install
@@ -36,7 +35,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          distribution: 'zulu'
       - name: instalando dependencias
         working-directory: front-end/
         run: npm install
