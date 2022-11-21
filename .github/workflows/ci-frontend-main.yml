@@ -23,6 +23,8 @@ jobs:
       - name: instalando dependencias
         working-directory: front-end/
         run: npm install
+      - name: instalando only dev
+        run: npm install --only=dev
       - name: Test
         working-directory: front-end/
         run: npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
@@ -38,6 +40,8 @@ jobs:
       - name: instalando dependencias
         working-directory: front-end/
         run: npm install
+      - name: instalando only dev
+        run: npm install --only=dev
       - name: Package
         working-directory: front-end/
         run: npm run build --prod
