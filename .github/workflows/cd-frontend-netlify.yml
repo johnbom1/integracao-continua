@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy Netlify
     steps:
+      - uses: actions/checkout@v3
       - name: Restaurar o Cache
         uses: actions/cache@v3
         with:
