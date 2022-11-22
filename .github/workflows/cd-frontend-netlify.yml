@@ -1,4 +1,4 @@
-name: CD Front-end
+name: CD Front-end NETLIFY
 
 on:
   schedule:
